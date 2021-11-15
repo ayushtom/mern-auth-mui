@@ -1,18 +1,10 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
-
-import clsx from 'clsx';
-
 import { Avatar, Button, TextField, CircularProgress, Box, Typography, Container } from '@material-ui/core';
-
-import Link from '@material-ui/core/Link';
-import Grid from '@material-ui/core/Grid';
-
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { makeStyles } from '@material-ui/core/styles';
 
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage'
-import SuccessMessage from '../../components/SuccessMessage/SuccessMessage'
 
 const useStyles = makeStyles((theme) => ({
   paper: {

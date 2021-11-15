@@ -1,34 +1,30 @@
-import React,{useState} from 'react';
-
+import React, { useState } from 'react';
 import AccessForm from './AccessForm'
 import ProfileForm from './ProfileForm'
-
 import { useForm } from '../../utils/hook';
-
-
 export default function Register() {
 
-    const registerUserCallback=()=>{
+    const registerUserCallback = () => {
         console.log(values);
     }
 
     const [step, setstep] = useState(1)
-    
+
     const { onChange, onSubmit, values } = useForm(registerUserCallback, {
         email: '',
         firstName: '',
-        lastName:'',
-        
-        password:'',
-        confirmPassword:''
-      });
-    
-    const nextState = ()=>{
-        setstep(step+1)
+        lastName: '',
+
+        password: '',
+        confirmPassword: ''
+    });
+
+    const nextState = () => {
+        setstep(step + 1)
     }
 
-    const prevState = ()=>{
-        setstep(step-1)
+    const prevState = () => {
+        setstep(step - 1)
     }
 
     switch (step) {
@@ -36,8 +32,8 @@ export default function Register() {
             return <AccessForm handleChange={onChange} values={values} nextStep={nextState} />
 
         case 2:
-            return <ProfileForm handleSubmit={onSubmit} handleChange={onChange} values={values} prevStep={prevState}/>
-    
+            return <ProfileForm handleSubmit={onSubmit} handleChange={onChange} values={values} prevStep={prevState} />
+
         default:
             <AccessForm />
             break;

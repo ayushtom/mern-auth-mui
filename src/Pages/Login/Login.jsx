@@ -1,19 +1,11 @@
 import React, { useContext, useState } from 'react';
-import { Link } from "react-router-dom";
 import { useHistory } from 'react-router-dom'
 import axios from 'axios'
-
-
-import jwt_decode from "jwt-decode";
 import { AuthContext } from '../../context/context'
 import { Avatar, Button, TextField, Grid, Box, Typography, Container } from '@material-ui/core';
-
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { makeStyles } from '@material-ui/core/styles';
-
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage'
-import SuccessMessage from '../../components/SuccessMessage/SuccessMessage'
-
 import { useForm } from '../../utils/hook';
 
 const useStyles = makeStyles((theme) => ({

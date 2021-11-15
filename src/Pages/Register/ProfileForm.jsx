@@ -1,10 +1,7 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom'
-
-
-import { Typography, Grid, Box, TextField, Container, Button, Select, MenuItem, FormControl, InputLabel } from '@material-ui/core'
-
+import { Typography, Grid, Box, TextField, Container, Button } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
